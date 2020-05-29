@@ -69,8 +69,8 @@ variable "internet_proxy" {
   description = "Internet egress proxy ouptuts"
 }
 
-variable "internet_proxy_cidr_blocks" {
-  description = "Internet egress proxy cidr blocks"
+variable "internet_proxy_sg_id" {
+  description = "Internet egress endpoint security group"
 }
 
 variable "dks_subnet" {

@@ -26,13 +26,13 @@ resource "aws_security_group_rule" "ingress_https_vpc_endpoints_from_emr" {
 }
 
 resource "aws_security_group_rule" "egress_https_emr_to_internet_proxy" {
-  description       = "egress_https_emr_to_internet_proxy"
-  from_port         = 3128
-  protocol          = "tcp"
-  security_group_id = aws_security_group.emr.id
-  to_port           = 3128
-  type              = "egress"
-  cidr_blocks       = var.internet_proxy_cidr_blocks
+  description              = "egress_https_emr_to_internet_proxy"
+  from_port                = 3128
+  protocol                 = "tcp"
+  security_group_id        = aws_security_group.emr.id
+  to_port                  = 3128
+  type                     = "egress"
+  source_security_group_id = var.internet_proxy_sg_id
 }
 
 resource "aws_security_group_rule" "egress_https_from_emr_to_dks" {
