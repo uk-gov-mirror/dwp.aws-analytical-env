@@ -48,13 +48,6 @@ variable "dks_route_table" {
   type        = map(string)
 }
 
-
-variable "proxy_route_table" {
-  description = "Internet Egress route table"
-  type        = map(list(string))
-}
-
-variable "proxy_subnet" {
-  description = "Internet Egress subnet ranges"
-  type        = map(list(string))
+variable "internet_proxy_service_name" {
+  description = "Internet Proxy VPCE Service Name"
 }
