@@ -111,12 +111,12 @@ resource "aws_iam_role_policy" "cognito_rds_sync_lambda_basic_policy_attach" {
 
 data "aws_iam_policy_document" "cognito_rds_sync_lambda_execution_policy" {
   statement {
-    sid       = "cognito-rds-sync-mgmt"
+    sid       = "CognitoRdsSyncMgmt"
     actions   = ["sts:AssumeRole"]
     resources = ["arn:aws:iam::${var.mgmt_account}:role/${var.name_prefix}-mgmt-cognito-rds-sync-role"]
   }
   statement {
-    sid = "lambda_basic_execution"
+    sid = "LambdaBasicExecution"
     actions = [
       "logs:CreateLogGroup",
       "logs:CreateLogStream",
