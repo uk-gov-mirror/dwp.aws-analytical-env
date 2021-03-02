@@ -130,11 +130,7 @@ resource "aws_emr_cluster" "cluster" {
   ]
 
   lifecycle {
-    ignore_changes = [
-      instance_group,
-      ec2_attributes,
-      all
-    ]
+    ignore_changes  = all
     prevent_destroy = true
   }
 }
