@@ -36,7 +36,7 @@ jobs:
 #          - after-midnight-check
         trigger: true
       - get: aws-analytical-env
-        resource: batch-testing
+        resource: aws-analytical-env-testing-batch
 #        passed:
 #          - preprod
 #          - after-midnight-check
