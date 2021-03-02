@@ -28,22 +28,23 @@ jobs:
       - get: emp-release
         passed:
           - preprod
-          - after-midnight-check
+#          - after-midnight-check
         trigger: true
       - get: emr-launcher-release
         passed:
           - preprod
-          - after-midnight-check
+#          - after-midnight-check
         trigger: true
       - get: aws-analytical-env
-        passed:
-          - preprod
-          - after-midnight-check
+        resource: batch-testing
+#        passed:
+#          - preprod
+#          - after-midnight-check
         trigger: true
       - get: manage-mysql-user-release
         passed:
           - preprod
-          - after-midnight-check
+#          - after-midnight-check
         trigger: false
       - .: (( inject meta.plan.terraform-bootstrap ))
         params:
