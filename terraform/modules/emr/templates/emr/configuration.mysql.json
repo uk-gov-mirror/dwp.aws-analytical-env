@@ -80,7 +80,7 @@
   {
     "Classification": "tez-site",
     "Properties": {
-      "tez.aux.uris": "/libs/hbase-client.jar"
+      "tez.aux.uris": "/libs/"
     }
   }
 ]
